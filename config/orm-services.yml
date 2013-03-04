@@ -1,0 +1,9 @@
+parameters:
+    ytko.doctrine_behaviors.uploadable_listener.class: Ytko\DoctrineBehaviors\ORM\UploadableListener
+
+services:
+    ytko.doctrine_behaviors.uploadable_listener:
+        class:   "%ytko.doctrine_behaviors.uploadable_listener.class%"
+        public:  false
+        tags:
+            - { name: doctrine.event_subscriber }
